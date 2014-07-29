@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.lht.notepad"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="4" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".activity.NotePadMainActivity"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".activity.NotePadPreferenceActivity"
+				  android:label="@string/app_name"
+				  android:theme="@android:style/Theme.Light.NoTitleBar">
+		</activity>
+		<activity android:name=".activity.NotePadNewActivity"
+				  android:label="@string/app_name"
+				  android:theme="@android:style/Theme.Light.NoTitleBar">
+		</activity>
+		<activity android:name=".activity.NotePadScanActivity"
+				  android:label="@string/app_name"
+				  android:theme="@android:style/Theme.Light.NoTitleBar">
+		</activity>
+		<activity android:name=".activity.NotePadEditActivity"
+				  android:label="@string/app_name"
+				  android:theme="@android:style/Theme.Light.NoTitleBar">
+		</activity>
+		<activity android:name=".activity.NotePadSearchActivity"
+				  android:label="日志搜索"
+				  android:icon="@drawable/search_light"
+				  android:theme="@android:style/Theme.Dialog">
+		</activity>
+		<receiver android:name=".appwidget.NotePadAppWidget">
+        	<meta-data android:name="android.appwidget.provider"
+        			android:resource="@xml/widget"/>
+        	<intent-filter>
+        		<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        	</intent-filter>
+        </receiver>
+    </application>
+</manifest>
