@@ -1,5 +1,5 @@
 /**
- * @author LHT
+ * @author WJZ
  */
 package com.lht.notepad.activity;
 
@@ -315,7 +315,6 @@ public class NotePadMainActivity extends Activity {
 	
 	/**
 	 * 进度条线程
-	 * @author LHT
 	 */
 	private class progressThread extends Thread {
 		@Override

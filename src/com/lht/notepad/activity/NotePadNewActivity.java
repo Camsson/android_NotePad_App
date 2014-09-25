@@ -1,5 +1,5 @@
 /**
- * @author LHT
+ * @author WJZ
  */
 package com.lht.notepad.activity;
 

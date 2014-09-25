@@ -1,3 +1,6 @@
+/**
+ * @author WJZ
+ */
 package com.lht.notepad.activity;
 
 import java.util.Date;
