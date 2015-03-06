@@ -66,7 +66,7 @@ public class NotePadPreferenceActivity extends PreferenceActivity {
 				AlertDialog ad = new AlertDialog.Builder(NotePadPreferenceActivity.this).create();
 				ad.setTitle("NotePad");
 				ad.setIcon(R.drawable.icon);
-				ad.setMessage("       by LHT       2012.1.14");
+				ad.setMessage("       by WJZ       2014.10.14");
 				ad.setCanceledOnTouchOutside(true);
 				ad.show();
 				
@@ -87,29 +87,29 @@ public class NotePadPreferenceActivity extends PreferenceActivity {
 		
 		builder_1 = new Builder(NotePadPreferenceActivity.this);
 		builder_1.setView(linearlayout_1);
-		builder_1.setTitle("ÉèÖÃĞÂÃÜÂë");
+		builder_1.setTitle("è®¾ç½®æ–°å¯†ç ");
 		builder_1.setIcon(R.drawable.lock_light);
-		builder_1.setPositiveButton("È·¶¨", new OnClickListener() {
+		builder_1.setPositiveButton("ç¡®å®š", new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				String key = newkeytext.getText().toString();
 				String keyagain = newkeyagaintext.getText().toString();
 				
 				if (key.equals("")) {
-					Toast.makeText(NotePadPreferenceActivity.this, "ÃÜÂë²»ÄÜÎª¿Õ", Toast.LENGTH_LONG).show();
+					Toast.makeText(NotePadPreferenceActivity.this, "å¯†ç ä¸èƒ½ä¸ºç©º", Toast.LENGTH_LONG).show();
 				}
 				else if (key.equals(keyagain)) {
 					PrefVO.setUserPassword(key);
-					usersafety.setTitle("ĞŞ¸ÄÃÜÂë");
+					usersafety.setTitle("ä¿®æ”¹å¯†ç ");
 				}
 				else {
-					Toast.makeText(NotePadPreferenceActivity.this, "Á½´ÎÊäÈë²»ÕıÈ·", Toast.LENGTH_LONG).show();
+					Toast.makeText(NotePadPreferenceActivity.this, "ä¸¤æ¬¡è¾“å…¥ä¸æ­£ç¡®", Toast.LENGTH_LONG).show();
 				}
 				
 				dialog.dismiss();
 				clearText();
 			}
 		});
-		builder_1.setNegativeButton("È¡Ïû", new OnClickListener() {
+		builder_1.setNegativeButton("å–æ¶ˆ", new OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -121,32 +121,32 @@ public class NotePadPreferenceActivity extends PreferenceActivity {
 		
 		builder_2 = new Builder(NotePadPreferenceActivity.this);
 		builder_2.setView(linearlayout_2);
-		builder_2.setTitle("ĞŞ¸ÄÃÜÂë");
+		builder_2.setTitle("ä¿®æ”¹å¯†ç ");
 		builder_2.setIcon(R.drawable.lock_light);
-		builder_2.setPositiveButton("È·¶¨", new OnClickListener() {
+		builder_2.setPositiveButton("ç¡®å®š", new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				String oldkey = oldkeytext.getText().toString();
 				String key = modifykeytext.getText().toString();
 				String keyagain = modifykeyagaintext.getText().toString();
 				
 				if (!oldkey.equals(PrefVO.userPasswordValue)) {
-					Toast.makeText(NotePadPreferenceActivity.this, "ÃÜÂë´íÎó", Toast.LENGTH_LONG).show();
+					Toast.makeText(NotePadPreferenceActivity.this, "å¯†ç é”™è¯¯", Toast.LENGTH_LONG).show();
 				}
 				else if (key.equals("")) {
-					Toast.makeText(NotePadPreferenceActivity.this, "ÃÜÂë²»ÄÜÎª¿Õ", Toast.LENGTH_LONG).show();
+					Toast.makeText(NotePadPreferenceActivity.this, "å¯†ç ä¸èƒ½ä¸ºç©º", Toast.LENGTH_LONG).show();
 				}
 				else if(key.equals(keyagain)) {
 					PrefVO.setUserPassword(key);
 				}
 				else {
-					Toast.makeText(NotePadPreferenceActivity.this, "Á½´ÎÊäÈë²»ÕıÈ·", Toast.LENGTH_LONG).show();
+					Toast.makeText(NotePadPreferenceActivity.this, "ä¸¤æ¬¡è¾“å…¥ä¸æ­£ç¡®", Toast.LENGTH_LONG).show();
 				}
 				
 				dialog.dismiss();
 				clearText();
 			}
 		});
-		builder_2.setNegativeButton("È¡Ïû", new OnClickListener() {
+		builder_2.setNegativeButton("å–æ¶ˆ", new OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -158,10 +158,10 @@ public class NotePadPreferenceActivity extends PreferenceActivity {
 		
 		usersafety = (Preference)findPreference("usersafety");
 		if (PrefVO.userPasswordValue.equals("")) {
-			usersafety.setTitle("ÉèÖÃĞÂÃÜÂë");
+			usersafety.setTitle("è®¾ç½®æ–°å¯†ç ");
 		}
 		else {
-			usersafety.setTitle("ĞŞ¸ÄÃÜÂë");
+			usersafety.setTitle("ä¿®æ”¹å¯†ç ");
 		}
 		usersafety.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			
@@ -182,7 +182,7 @@ public class NotePadPreferenceActivity extends PreferenceActivity {
 	}
 	
 	/**
-	 * Çå¿ÕEditText
+	 * æ¸…ç©ºEditText
 	 */
 	private void clearText() {
 		newkeytext.setText("");
